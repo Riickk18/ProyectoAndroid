@@ -1,9 +1,124 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ListProduct">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="UselessParent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textintro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/text_header"
+                android:textSize="@dimen/text_heading" />
+
+            <TextView
+                android:id="@+id/choose_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textintro"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/selecciona_un_producto" />
+
+            <ImageView
+                android:id="@+id/blu_vivo_xl3_plus"
+                android:layout_width="130dp"
+                android:layout_height="151dp"
+                android:layout_below="@id/choose_phone"
+                android:contentDescription="@string/blu_vivo_x13_plus"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/blu_vivo_xl3_plus" />
+
+            <TextView
+                android:id="@+id/blu_vivo_xl3_plus_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blu_vivo_xl3_plus_text"
+                android:layout_toRightOf="@id/blu_vivo_xl3_plus"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_blu_vivo_xl3_plus"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/blu_vivo_xl3_plus_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/choose_phone"
+                android:layout_toRightOf="@id/blu_vivo_xl3_plus"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/blu_vivo_x13_plus" />
+
+            <ImageView
+                android:id="@+id/bq_aquaris_x5"
+                android:layout_width="130dp"
+                android:layout_height="151dp"
+                android:layout_below="@id/blu_vivo_xl3_plus"
+                android:contentDescription="@string/bq_aquaris_x5"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/bq_aquaris_x5" />
+
+            <TextView
+                android:id="@+id/bq_aquaris_x5_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bq_aquaris_x5_text"
+                android:layout_toRightOf="@id/bq_aquaris_x5"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_bq_aquaris_x5"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/bq_aquaris_x5_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/blu_vivo_xl3_plus"
+                android:layout_toRightOf="@id/bq_aquaris_x5"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/bq_aquaris_x5" />
+
+            <ImageView
+                android:id="@+id/essential_phone"
+                android:layout_width="130dp"
+                android:layout_height="151dp"
+                android:layout_below="@+id/bq_aquaris_x5"
+                android:contentDescription="@string/tex_essential_phone"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/essential_phone"/>
+
+            <TextView
+                android:id="@+id/essential_phone_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bq_aquaris_x5"
+                android:layout_toRightOf="@id/essential_phone"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/tex_essential_phone"/>
+
+            <TextView
+                android:id="@+id/essential_phone_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/essential_phone_text"
+                android:layout_toRightOf="@id/essential_phone"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_essential_phone"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

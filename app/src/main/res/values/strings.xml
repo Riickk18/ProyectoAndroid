@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">ProyectoAndroid</string>
+    <string name="text_header">Shopping Phone</string>
+    <string name="selecciona_un_producto">Selecciona un producto</string>
+    <string name="blu_vivo_x13_plus">BLU Vivo XL3 Plus - 6.0” HD+18:9 Display Smartphone with Qualcomm Snapdragon</string>
+    <string name="price_blu_vivo_xl3_plus">139 $</string>
+    <string name="bq_aquaris_x5">BQ Aquaris X5</string>
+    <string name="price_bq_aquaris_x5">150 $</string>
+    <string name="tex_essential_phone">Essential Phone in Black Moon – 128 GB Unlocked Titanium and Ceramic phone</string>
+    <string name="price_essential_phone">489 $</string>
 </resources>
