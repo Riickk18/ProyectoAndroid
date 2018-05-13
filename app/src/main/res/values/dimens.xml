@@ -6,4 +6,6 @@
     <dimen name="size_price">35sp</dimen>
     <dimen name="padding_left">50dp</dimen>
     <dimen name="padding_bottom">14dp</dimen>
+    <dimen name="width_image">130dp</dimen>
+    <dimen name="heigth_image">151dp</dimen>
 </resources>
