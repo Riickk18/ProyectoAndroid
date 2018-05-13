@@ -118,6 +118,35 @@
                 android:textSize="@dimen/size_price"
                 android:textStyle="bold" />
 
+            <ImageView
+                android:id="@+id/google_pixel_2"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/essential_phone"
+                android:contentDescription="@string/google_pixel_2"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/google_pixel_2"/>
+
+            <TextView
+                android:id="@+id/google_pixel_2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/essential_phone"
+                android:layout_toRightOf="@id/google_pixel_2"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/google_pixel_2"/>
+
+            <TextView
+                android:id="@+id/google_pixel_2_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/google_pixel_2_text"
+                android:layout_toRightOf="@id/google_pixel_2"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_google_pixel"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
         </RelativeLayout>
     </ScrollView>
 
