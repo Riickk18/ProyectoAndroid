@@ -6,13 +6,112 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout0"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@id/relativeLayout1.1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/imagen1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/blu_vivo_xl3_plus"/>
+
+                <TextView
+                    android:id="@+id/nombreProducto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:layout_toRightOf="@+id/imagen1"
+                    android:text="IPhone X"
+                    android:textSize="25dp"/>
+
+                <TextView
+                    android:id="@+id/descripcionProducto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/imagen1"
+                    android:layout_below="@id/nombreProducto1"
+                    android:text="hola valeeeeeeeeeeee"/>
+
+                <TextView
+                    android:id="@+id/precioProducto1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/imagen1"
+                    android:layout_below="@id/descripcionProducto1"
+                    android:text="300$"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1.2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout1.1"
+                android:layout_marginTop="5dp">
+
+                <ImageView
+                    android:id="@+id/imagen2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/essential_phone"/>
+
+                <TextView
+                    android:id="@+id/nombreProducto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40sp"
+                    android:layout_toRightOf="@+id/imagen2"
+                    android:text="Essential Phone"
+                    android:textSize="25dp"/>
+
+                <TextView
+                    android:id="@+id/descripcionProducto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/imagen2"
+                    android:layout_below="@id/nombreProducto2"
+                    android:text="Telefono con noch"/>
+
+                <TextView
+                    android:id="@+id/precioProducto2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@+id/imagen2"
+                    android:layout_below="@id/descripcionProducto2"
+                    android:text="300$"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/launchListProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:layout_gravity="bottom|end"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="bAgregarArticulo"
+        android:tint="@android:color/background_light"
+        app:backgroundTint="?attr/colorPrimary"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add" />
 
 </android.support.constraint.ConstraintLayout>
