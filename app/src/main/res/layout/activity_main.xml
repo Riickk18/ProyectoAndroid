@@ -17,42 +17,45 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/textintro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_regular"
+                android:text="@string/header_main"
+                android:textSize="@dimen/text_heading" />
+
             <RelativeLayout
                 android:id="@id/relativeLayout1.1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="@dimen/margen_superior_relativeLayout"
+                android:layout_below="@id/textintro">
 
                 <ImageView
-                    android:id="@+id/imagen1"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/blu_vivo_xl3_plus"/>
+                    android:id="@+id/image1"
+                    android:layout_width="@dimen/width_image"
+                    android:layout_height="@dimen/heigth_image"
+                    android:layout_below="@id/choose_phone"
+                    android:padding="@dimen/padding_regular" />
 
                 <TextView
-                    android:id="@+id/nombreProducto1"
+                    android:id="@+id/descripcion1"
                     android:layout_width="wrap_content"
-                    android:layout_height="40sp"
-                    android:layout_toRightOf="@+id/imagen1"
-                    android:text="IPhone X"
-                    android:textSize="25dp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/choose_phone"
+                    android:layout_toRightOf="@id/image1"
+                    android:padding="@dimen/padding_wide" />
 
                 <TextView
-                    android:id="@+id/descripcionProducto1"
+                    android:id="@+id/precio1"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@+id/imagen1"
-                    android:layout_below="@id/nombreProducto1"
-                    android:text="hola valeeeeeeeeeeee"/>
-
-                <TextView
-                    android:id="@+id/precioProducto1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@+id/imagen1"
-                    android:layout_below="@id/descripcionProducto1"
-                    android:text="300$"
-                    android:textSize="30sp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descripcion1"
+                    android:layout_toRightOf="@id/image1"
+                    android:paddingLeft="@dimen/padding_left"
+                    android:textSize="@dimen/size_price"
+                    android:textStyle="bold" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -60,41 +63,105 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/relativeLayout1.1"
-                android:layout_marginTop="5dp">
+                android:layout_marginTop="@dimen/margen_superior_relativeLayout">
 
                 <ImageView
-                    android:id="@+id/imagen2"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:src="@drawable/essential_phone"/>
+                    android:id="@+id/image2"
+                    android:layout_width="@dimen/width_image"
+                    android:layout_height="@dimen/heigth_image"
+                    android:layout_below="@id/choose_phone"
+                    android:padding="@dimen/padding_regular" />
 
                 <TextView
-                    android:id="@+id/nombreProducto2"
+                    android:id="@+id/descripcion2"
                     android:layout_width="wrap_content"
-                    android:layout_height="40sp"
-                    android:layout_toRightOf="@+id/imagen2"
-                    android:text="Essential Phone"
-                    android:textSize="25dp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/choose_phone"
+                    android:layout_toRightOf="@id/image2"
+                    android:padding="@dimen/padding_wide" />
 
                 <TextView
-                    android:id="@+id/descripcionProducto2"
+                    android:id="@+id/precio2"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@+id/imagen2"
-                    android:layout_below="@id/nombreProducto2"
-                    android:text="Telefono con noch"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descripcion2"
+                    android:layout_toRightOf="@id/image2"
+                    android:paddingLeft="@dimen/padding_left"
+                    android:textSize="@dimen/size_price"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1.3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout1.2"
+                android:layout_marginTop="@dimen/margen_superior_relativeLayout">
+
+                <ImageView
+                    android:id="@+id/image3"
+                    android:layout_width="@dimen/width_image"
+                    android:layout_height="@dimen/heigth_image"
+                    android:layout_below="@id/choose_phone"
+                    android:padding="@dimen/padding_regular" />
 
                 <TextView
-                    android:id="@+id/precioProducto2"
+                    android:id="@+id/descripcion3"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_toRightOf="@+id/imagen2"
-                    android:layout_below="@id/descripcionProducto2"
-                    android:text="300$"
-                    android:textSize="30sp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/choose_phone"
+                    android:layout_toRightOf="@id/image3"
+                    android:padding="@dimen/padding_wide" />
+
+                <TextView
+                    android:id="@+id/precio3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descripcion3"
+                    android:layout_toRightOf="@id/image3"
+                    android:paddingLeft="@dimen/padding_left"
+                    android:textSize="@dimen/size_price"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relativeLayout1.4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relativeLayout1.3"
+                android:layout_marginTop="@dimen/margen_superior_relativeLayout">
+
+                <ImageView
+                    android:id="@+id/image4"
+                    android:layout_width="@dimen/width_image"
+                    android:layout_height="@dimen/heigth_image"
+                    android:layout_below="@id/choose_phone"
+                    android:padding="@dimen/padding_regular" />
+
+                <TextView
+                    android:id="@+id/descripcion4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/choose_phone"
+                    android:layout_toRightOf="@id/image4"
+                    android:padding="@dimen/padding_wide" />
+
+                <TextView
+                    android:id="@+id/precio4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/descripcion4"
+                    android:layout_toRightOf="@id/image4"
+                    android:paddingLeft="@dimen/padding_left"
+                    android:textSize="@dimen/size_price"
+                    android:textStyle="bold" />
+
             </RelativeLayout>
 
         </RelativeLayout>
+
     </ScrollView>
 
     <android.support.design.widget.FloatingActionButton

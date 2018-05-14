@@ -1,6 +1,5 @@
 <resources>
-    <string name="app_name">ProyectoAndroid</string>
-    <string name="text_header">Shopping Phone</string>
+    <string name="app_name">Shopping Phone</string>
     <string name="selecciona_un_producto">Selecciona un producto</string>
     <string name="blu_vivo_x13_plus">BLU Vivo XL3 Plus - 6.0” HD+18:9 Display Smartphone with Qualcomm Snapdragon</string>
     <string name="price_blu_vivo_xl3_plus">139 $</string>
@@ -10,6 +9,7 @@
     <string name="price_essential_phone">489 $</string>
     <string name="google_pixel_2">Google Pixel 2 GSM/CDMA Unlocked</string>
     <string name="price_google_pixel">539 $</string>
+<<<<<<< HEAD
     <string name="honor_7x">Honor 7X - 18:9 screen ratio, 5.93 full-view display. Dual-lens camera. Unlocked Smartphone, Black</string>
     <string name="price_honor_7x">199 $</string>
     <string name="huawei_mate_10_pro" translatable="false">Huawei Mate 10 Pro Unlocked Phone, 6 6GB/128GB, AI Processor</string>
@@ -65,4 +65,8 @@
     <string name="order_samsung_galaxy_s9_plus">Your ordered SAMSUNG GALAXY S9 PLUS</string>
     <string name="order_xiaomi_mi_mix">Your ordered XIAOMI MI MIX</string>
     <string name="order_xiaomi_mi_mix_2">Your ordered XIAOMI MI MIX 2</string>
+=======
+    <string name="header_main">Lista de productos en carrito</string>
+    <string name="carrito_vacio">Actualmente tu carrito se encuentra vacío</string>
+>>>>>>> Richard
 </resources>
