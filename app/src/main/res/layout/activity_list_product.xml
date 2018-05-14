@@ -59,7 +59,8 @@
                 android:layout_below="@id/blu_vivo_xl3_plus"
                 android:contentDescription="@string/bq_aquaris_x5"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/bq_aquaris_x5"/>
+                android:src="@drawable/bq_aquaris_x5"
+                android:onClick="showBqAquaris"/>
 
             <TextView
                 android:id="@+id/bq_aquaris_x5_price"
@@ -88,7 +89,8 @@
                 android:layout_below="@+id/bq_aquaris_x5"
                 android:contentDescription="@string/tex_essential_phone"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/essential_phone"/>
+                android:src="@drawable/essential_phone"
+                android:onClick="showEssential"/>
 
             <TextView
                 android:id="@+id/essential_phone_text"
@@ -117,7 +119,8 @@
                 android:layout_below="@+id/essential_phone"
                 android:contentDescription="@string/google_pixel_2"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/google_pixel_2"/>
+                android:src="@drawable/google_pixel_2"
+                android:onClick="showGoogle"/>
 
             <TextView
                 android:id="@+id/google_pixel_2_text"
@@ -146,7 +149,8 @@
                 android:layout_below="@+id/google_pixel_2"
                 android:contentDescription="@string/honor_7x"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/honor_7x"/>
+                android:src="@drawable/honor_7x"
+                android:onClick="showHonor"/>
 
             <TextView
                 android:id="@+id/honor_7x_text"
@@ -175,7 +179,8 @@
                 android:layout_below="@+id/honor_7x"
                 android:contentDescription="@string/huawei_mate_10_pro"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/huawei_mate_10_pro"/>
+                android:src="@drawable/huawei_mate_10_pro"
+                android:onClick="showHuaweiMate10"/>
 
             <TextView
                 android:id="@+id/huawei_mate_10_pro_text"
@@ -204,7 +209,8 @@
                 android:layout_below="@+id/huawei_mate_10_pro"
                 android:contentDescription="@string/huawei_p20_pro"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/huawei_p20_pro"/>
+                android:src="@drawable/huawei_p20_pro"
+                android:onClick="showHuaweiP20"/>
 
             <TextView
                 android:id="@+id/huawei_p20_pro_text"
@@ -233,7 +239,8 @@
                 android:layout_below="@+id/huawei_p20_pro"
                 android:contentDescription="@string/iphone_8"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/iphone_8"/>
+                android:src="@drawable/iphone_8"
+                android:onClick="showIphone8"/>
 
             <TextView
                 android:id="@+id/iphone_8_text"
@@ -262,7 +269,8 @@
                 android:layout_below="@+id/iphone_8"
                 android:contentDescription="@string/iphone_x"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/iphone_x"/>
+                android:src="@drawable/iphone_x"
+                android:onClick="showIphoneX"/>
 
             <TextView
                 android:id="@+id/iphone_x_text"
@@ -291,7 +299,8 @@
                 android:layout_below="@+id/iphone_x"
                 android:contentDescription="@string/lg_g7_thinq"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/lg_g7_thinq"/>
+                android:src="@drawable/lg_g7_thinq"
+                android:onClick="showLgG7Thinq"/>
 
             <TextView
                 android:id="@+id/lg_g7_thinq_text"
@@ -320,7 +329,8 @@
                 android:layout_below="@+id/lg_g7_thinq"
                 android:contentDescription="@string/lg_g7_thinq2"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/lg_g7_thinq_2"/>
+                android:src="@drawable/lg_g7_thinq_2"
+                android:onClick="showLgG7Thinq2"/>
 
             <TextView
                 android:id="@+id/lg_g7_thinq2_text"
@@ -349,7 +359,8 @@
                 android:layout_below="@+id/lg_g7_thinq2"
                 android:contentDescription="@string/mate_10_porsche_design"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/mate_10_porsche_design"/>
+                android:src="@drawable/mate_10_porsche_design"
+                android:onClick="showMate10Porsche"/>
 
             <TextView
                 android:id="@+id/mate_10_porsche_design_text"
@@ -378,7 +389,8 @@
                 android:layout_below="@+id/mate_10_porsche_design"
                 android:contentDescription="@string/motorola_moto_g5"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/motorola_moto_g5"/>
+                android:src="@drawable/motorola_moto_g5"
+                android:onClick="showMotorola"/>
 
             <TextView
                 android:id="@+id/motorola_moto_g5_text"
@@ -407,7 +419,8 @@
                 android:layout_below="@+id/motorola_moto_g5"
                 android:contentDescription="@string/nokia8_sirocco"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/nokia8_sirocco"/>
+                android:src="@drawable/nokia8_sirocco"
+                android:onClick="showNokia8"/>
 
             <TextView
                 android:id="@+id/nokia8_sirocco_text"
@@ -436,7 +449,8 @@
                 android:layout_below="@+id/nokia8_sirocco"
                 android:contentDescription="@string/nokia_7"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/nokia_7"/>
+                android:src="@drawable/nokia_7"
+                android:onClick="showNokia7"/>
 
             <TextView
                 android:id="@+id/nokia_7_text"
@@ -465,7 +479,8 @@
                 android:layout_below="@+id/nokia_7"
                 android:contentDescription="@string/oneplus_5t"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/oneplus_5t"/>
+                android:src="@drawable/oneplus_5t"
+                android:onClick="showOneplus"/>
 
             <TextView
                 android:id="@+id/oneplus_5t_text"
@@ -487,14 +502,15 @@
                 android:textSize="@dimen/size_price"
                 android:textStyle="bold" />
 
-            <ImageView
-            android:id="@+id/razer_phone_black"
-            android:layout_width="@dimen/width_image"
-            android:layout_height="@dimen/heigth_image"
-            android:layout_below="@+id/oneplus_5t"
-            android:contentDescription="@string/razer_phone_black"
-            android:padding="@dimen/padding_regular"
-            android:src="@drawable/razer_phone_black"/>
+                <ImageView
+                android:id="@+id/razer_phone_black"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/oneplus_5t"
+                android:contentDescription="@string/razer_phone_black"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/razer_phone_black"
+                android:onClick="showRazer"/>
 
             <TextView
                 android:id="@+id/razer_phone_black_text"
@@ -523,7 +539,8 @@
                 android:layout_below="@+id/razer_phone_black"
                 android:contentDescription="@string/samsung_a8_2018"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/samsung_a8_2018"/>
+                android:src="@drawable/samsung_a8_2018"
+                android:onClick="showA8"/>
 
             <TextView
                 android:id="@+id/samsung_a8_2018_text"
@@ -552,7 +569,8 @@
                 android:layout_below="@+id/samsung_a8_2018"
                 android:contentDescription="@string/samsung_galaxy_s9_plus"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/samsung_galaxy_s9_plus"/>
+                android:src="@drawable/samsung_galaxy_s9_plus"
+                android:onClick="showS9"/>
 
             <TextView
                 android:id="@+id/samsung_galaxy_s9_plus_text"
@@ -581,7 +599,8 @@
                 android:layout_below="@+id/samsung_galaxy_s9_plus"
                 android:contentDescription="@string/xiaomi_mi_mix"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/xiaomi_mi_mix"/>
+                android:src="@drawable/xiaomi_mi_mix"
+                android:onClick="showMix"/>
 
             <TextView
                 android:id="@+id/xiaomi_mi_mix_text"
@@ -610,7 +629,8 @@
                 android:layout_below="@+id/xiaomi_mi_mix"
                 android:contentDescription="@string/xiaomi_mi_mix_2"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/xiaomi_mi_mix_2"/>
+                android:src="@drawable/xiaomi_mi_mix_2"
+                android:onClick="showMix2"/>
 
             <TextView
                 android:id="@+id/xiaomi_mi_mix_2_text"
