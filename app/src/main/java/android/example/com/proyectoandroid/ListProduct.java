@@ -22,10 +22,13 @@ public class ListProduct extends AppCompatActivity {
      * and starts the MainActivity activity.
      * @param message Message to display.
      */
-    public void showPhoneOrder(String message) {
+    public void showPhoneOrder(String message, Product product) {
 
         displayToast(message);
         Intent intent = new Intent(this, MainActivity.class);
+        Bundle bundle = new Bundle();
+        bundle.putSerializable("product", product);
+        intent.putExtras(bundle);
         startActivity(intent);
     }
 
@@ -33,6 +36,7 @@ public class ListProduct extends AppCompatActivity {
      * Shows a message that image was clicked.
      */
     public void showBluVivoXl3PlusOrder(View view) {
-        showPhoneOrder(getString(R.string.order_blu_vivo_xl3_plus));
+        Product product = new Product("blu_vivo_xl3_plus", view.getContentDescription().toString(),"139 $");
+        showPhoneOrder(getString(R.string.order_blu_vivo_xl3_plus), product);
     }
 }
