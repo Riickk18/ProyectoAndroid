@@ -38,7 +38,8 @@
                 android:layout_below="@id/choose_phone"
                 android:contentDescription="@string/blu_vivo_x13_plus"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/blu_vivo_xl3_plus" />
+                android:src="@drawable/blu_vivo_xl3_plus"
+                android:onClick="showBluVivoXl3PlusOrder" />
 
             <TextView
                 android:id="@+id/blu_vivo_xl3_plus_price"
@@ -67,7 +68,7 @@
                 android:layout_below="@id/blu_vivo_xl3_plus"
                 android:contentDescription="@string/bq_aquaris_x5"
                 android:padding="@dimen/padding_regular"
-                android:src="@drawable/bq_aquaris_x5" />
+                android:src="@drawable/bq_aquaris_x5"/>
 
             <TextView
                 android:id="@+id/bq_aquaris_x5_price"
@@ -144,6 +145,499 @@
                 android:layout_toRightOf="@id/google_pixel_2"
                 android:paddingLeft="@dimen/padding_left"
                 android:text="@string/price_google_pixel"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/honor_7x"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/google_pixel_2"
+                android:contentDescription="@string/honor_7x"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/honor_7x"/>
+
+            <TextView
+                android:id="@+id/honor_7x_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/google_pixel_2"
+                android:layout_toRightOf="@id/honor_7x"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/honor_7x"/>
+
+            <TextView
+                android:id="@+id/honor_7x_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/honor_7x_text"
+                android:layout_toRightOf="@id/honor_7x"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_honor_7x"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/huawei_mate_10_pro"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/honor_7x"
+                android:contentDescription="@string/huawei_mate_10_pro"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/huawei_mate_10_pro"/>
+
+            <TextView
+                android:id="@+id/huawei_mate_10_pro_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/honor_7x"
+                android:layout_toRightOf="@id/huawei_mate_10_pro"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/huawei_mate_10_pro"/>
+
+            <TextView
+                android:id="@+id/huawei_mate_10_pro_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/huawei_mate_10_pro_text"
+                android:layout_toRightOf="@id/huawei_mate_10_pro"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_huawei_mate_10_pro"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/huawei_p20_pro"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/huawei_mate_10_pro"
+                android:contentDescription="@string/huawei_p20_pro"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/huawei_p20_pro"/>
+
+            <TextView
+                android:id="@+id/huawei_p20_pro_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/huawei_mate_10_pro"
+                android:layout_toRightOf="@id/huawei_p20_pro"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/huawei_p20_pro"/>
+
+            <TextView
+                android:id="@+id/huawei_p20_pro_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/huawei_p20_pro_text"
+                android:layout_toRightOf="@id/huawei_p20_pro"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_huawei_p20_pro"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iphone_8"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/huawei_p20_pro"
+                android:contentDescription="@string/iphone_8"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/iphone_8"/>
+
+            <TextView
+                android:id="@+id/iphone_8_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/huawei_p20_pro"
+                android:layout_toRightOf="@id/iphone_8"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/iphone_8"/>
+
+            <TextView
+                android:id="@+id/iphone_8_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iphone_8_text"
+                android:layout_toRightOf="@id/iphone_8"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_iphone_8"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/iphone_x"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/iphone_8"
+                android:contentDescription="@string/iphone_x"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/iphone_x"/>
+
+            <TextView
+                android:id="@+id/iphone_x_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iphone_8"
+                android:layout_toRightOf="@id/iphone_x"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/iphone_x"/>
+
+            <TextView
+                android:id="@+id/iphone_x_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iphone_x_text"
+                android:layout_toRightOf="@id/iphone_x"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_iphone_x"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/lg_g7_thinq"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/iphone_x"
+                android:contentDescription="@string/lg_g7_thinq"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/lg_g7_thinq"/>
+
+            <TextView
+                android:id="@+id/lg_g7_thinq_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iphone_x"
+                android:layout_toRightOf="@id/lg_g7_thinq"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/lg_g7_thinq"/>
+
+            <TextView
+                android:id="@+id/lg_g7_thinq_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lg_g7_thinq_text"
+                android:layout_toRightOf="@id/lg_g7_thinq"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_lg_g7_thinq"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/lg_g7_thinq2"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/lg_g7_thinq"
+                android:contentDescription="@string/lg_g7_thinq2"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/lg_g7_thinq_2"/>
+
+            <TextView
+                android:id="@+id/lg_g7_thinq2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lg_g7_thinq"
+                android:layout_toRightOf="@id/lg_g7_thinq2"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/lg_g7_thinq2"/>
+
+            <TextView
+                android:id="@+id/lg_g7_thinq2_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/lg_g7_thinq2_text"
+                android:layout_toRightOf="@id/lg_g7_thinq2"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_lg_g7_thinq2"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/mate_10_porsche_design"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/lg_g7_thinq2"
+                android:contentDescription="@string/mate_10_porsche_design"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/mate_10_porsche_design"/>
+
+            <TextView
+                android:id="@+id/mate_10_porsche_design_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lg_g7_thinq2"
+                android:layout_toRightOf="@id/mate_10_porsche_design"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/mate_10_porsche_design"/>
+
+            <TextView
+                android:id="@+id/mate_10_porsche_design_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/mate_10_porsche_design_text"
+                android:layout_toRightOf="@id/mate_10_porsche_design"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_mate_10_porsche_design"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/motorola_moto_g5"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/mate_10_porsche_design"
+                android:contentDescription="@string/motorola_moto_g5"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/motorola_moto_g5"/>
+
+            <TextView
+                android:id="@+id/motorola_moto_g5_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mate_10_porsche_design"
+                android:layout_toRightOf="@id/motorola_moto_g5"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/motorola_moto_g5"/>
+
+            <TextView
+                android:id="@+id/motorola_moto_g5_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/motorola_moto_g5_text"
+                android:layout_toRightOf="@id/motorola_moto_g5"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_motorola_moto_g5"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/nokia8_sirocco"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/motorola_moto_g5"
+                android:contentDescription="@string/nokia8_sirocco"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/nokia8_sirocco"/>
+
+            <TextView
+                android:id="@+id/nokia8_sirocco_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/motorola_moto_g5"
+                android:layout_toRightOf="@id/nokia8_sirocco"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/nokia8_sirocco"/>
+
+            <TextView
+                android:id="@+id/nokia8_sirocco_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nokia8_sirocco_text"
+                android:layout_toRightOf="@id/nokia8_sirocco"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_nokia8_sirocco"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/nokia_7"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/nokia8_sirocco"
+                android:contentDescription="@string/nokia_7"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/nokia_7"/>
+
+            <TextView
+                android:id="@+id/nokia_7_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nokia8_sirocco"
+                android:layout_toRightOf="@id/nokia_7"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/nokia_7"/>
+
+            <TextView
+                android:id="@+id/nokia_7_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nokia_7_text"
+                android:layout_toRightOf="@id/nokia_7"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_nokia_7"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/oneplus_5t"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/nokia_7"
+                android:contentDescription="@string/oneplus_5t"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/oneplus_5t"/>
+
+            <TextView
+                android:id="@+id/oneplus_5t_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nokia_7"
+                android:layout_toRightOf="@id/oneplus_5t"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/oneplus_5t"/>
+
+            <TextView
+                android:id="@+id/oneplus_5t_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/oneplus_5t_text"
+                android:layout_toRightOf="@id/oneplus_5t"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_oneplus_5t"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+            android:id="@+id/razer_phone_black"
+            android:layout_width="@dimen/width_image"
+            android:layout_height="@dimen/heigth_image"
+            android:layout_below="@+id/oneplus_5t"
+            android:contentDescription="@string/razer_phone_black"
+            android:padding="@dimen/padding_regular"
+            android:src="@drawable/razer_phone_black"/>
+
+            <TextView
+                android:id="@+id/razer_phone_black_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/oneplus_5t"
+                android:layout_toRightOf="@id/razer_phone_black"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/razer_phone_black"/>
+
+            <TextView
+                android:id="@+id/razer_phone_black_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/razer_phone_black_text"
+                android:layout_toRightOf="@id/razer_phone_black"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_razer_phone_black"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/samsung_a8_2018"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/razer_phone_black"
+                android:contentDescription="@string/samsung_a8_2018"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/samsung_a8_2018"/>
+
+            <TextView
+                android:id="@+id/samsung_a8_2018_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/razer_phone_black"
+                android:layout_toRightOf="@id/samsung_a8_2018"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/samsung_a8_2018"/>
+
+            <TextView
+                android:id="@+id/samsung_a8_2018_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/samsung_a8_2018_text"
+                android:layout_toRightOf="@id/samsung_a8_2018"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_samsung_a8_2018"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/samsung_galaxy_s9_plus"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/samsung_a8_2018"
+                android:contentDescription="@string/samsung_galaxy_s9_plus"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/samsung_galaxy_s9_plus"/>
+
+            <TextView
+                android:id="@+id/samsung_galaxy_s9_plus_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/samsung_a8_2018"
+                android:layout_toRightOf="@id/samsung_galaxy_s9_plus"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/samsung_galaxy_s9_plus"/>
+
+            <TextView
+                android:id="@+id/samsung_galaxy_s9_plus_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/samsung_galaxy_s9_plus_text"
+                android:layout_toRightOf="@id/samsung_galaxy_s9_plus"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_samsung_galaxy_s9_plus"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/xiaomi_mi_mix"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/samsung_galaxy_s9_plus"
+                android:contentDescription="@string/xiaomi_mi_mix"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/xiaomi_mi_mix"/>
+
+            <TextView
+                android:id="@+id/xiaomi_mi_mix_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/samsung_galaxy_s9_plus"
+                android:layout_toRightOf="@id/xiaomi_mi_mix"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/xiaomi_mi_mix"/>
+
+            <TextView
+                android:id="@+id/xiaomi_mi_mix_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xiaomi_mi_mix_text"
+                android:layout_toRightOf="@id/xiaomi_mi_mix"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_xiaomi_mi_mix"
+                android:textSize="@dimen/size_price"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/xiaomi_mi_mix_2"
+                android:layout_width="@dimen/width_image"
+                android:layout_height="@dimen/heigth_image"
+                android:layout_below="@+id/xiaomi_mi_mix"
+                android:contentDescription="@string/xiaomi_mi_mix_2"
+                android:padding="@dimen/padding_regular"
+                android:src="@drawable/xiaomi_mi_mix_2"/>
+
+            <TextView
+                android:id="@+id/xiaomi_mi_mix_2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/xiaomi_mi_mix"
+                android:layout_toRightOf="@id/xiaomi_mi_mix_2"
+                android:padding="@dimen/padding_wide"
+                android:text="@string/xiaomi_mi_mix_2"/>
+
+            <TextView
+                android:id="@+id/xiaomi_mi_mix_2_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/xiaomi_mi_mix_2_text"
+                android:layout_toRightOf="@id/xiaomi_mi_mix_2"
+                android:paddingLeft="@dimen/padding_left"
+                android:text="@string/price_xiaomi_mi_mix_2"
                 android:textSize="@dimen/size_price"
                 android:textStyle="bold" />
 
