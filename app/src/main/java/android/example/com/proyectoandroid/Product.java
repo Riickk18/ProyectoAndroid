@@ -1,5 +1,7 @@
 package android.example.com.proyectoandroid;
 
+import android.graphics.drawable.Drawable;
+
 import java.io.Serializable;
 
 public class Product implements Serializable {
