@@ -8,5 +8,8 @@
     <dimen name="padding_bottom">14dp</dimen>
     <dimen name="width_image">130dp</dimen>
     <dimen name="heigth_image">151dp</dimen>
-    <dimen name="margen_superior_relativeLayout">5dp</dimen>
+    <dimen name="margen_superior_relativeLayout">15dp</dimen>
+    <dimen name="paddind_description_cardView">20dp</dimen>
+    <dimen name="size_description_cardView">15sp</dimen>
+    <dimen name="padding_cardView">5dp</dimen>
 </resources>
