@@ -6,21 +6,21 @@ import java.io.Serializable;
 
 public class Product implements Serializable {
 
-    private String id;
+    private int id;
     private String description;
     private String price;
 
-    public Product(String id, String description, String price) {
+    public Product(int id, String description, String price) {
         this.id = id;
         this.description = description;
         this.price = price;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
