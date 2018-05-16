@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -16,7 +17,6 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,47 +24,58 @@ public class MainActivity extends AppCompatActivity {
 
     RecyclerView rv;
     public List<Product> products = new ArrayList<>();
+    public ArrayList<String> listaString = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        try{
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_main);
 
-        //Recibir el objeto de la segunda activity
-        Bundle objetoEnviado = getIntent().getExtras();
-        Product producto;
 
-        if(savedInstanceState!=null){
-            if(products.size()!=0){
-                RVAdapter adapter = new RVAdapter(products);
-                rv.setAdapter(adapter);
+            //Recibir el objeto de la segunda activity
+            Bundle objetoEnviado = getIntent().getExtras();
+            Product producto;
+
+            if(savedInstanceState!=null){
+                if(products!=null){
+                    listaString = savedInstanceState.getStringArrayList("listaObjetos");
+                    this.convertirListAProducts();
+                    RVAdapter adapter = new RVAdapter(products);
+                    rv.setAdapter(adapter);
+                }
             }
-        }
 
-        else{
-            //RelativeLayout vRelative = findViewById(R.id.relativeLayout0);
-            if(objetoEnviado!=null){
-                producto=(Product) objetoEnviado.getSerializable("product");
-                RecyclerView rv = findViewById(R.id.rv);
-                LinearLayoutManager llm = new LinearLayoutManager(this);
-                rv.setLayoutManager(llm);
-                products.add(producto);
-                Toast.makeText(getApplicationContext(), String.valueOf(products.size()), Toast.LENGTH_SHORT).show();
-                RVAdapter adapter = new RVAdapter(products);
-                rv.setAdapter(adapter);
-            }
             else{
+                //RelativeLayout vRelative = findViewById(R.id.relativeLayout0);
+                if(objetoEnviado!=null){
+                    producto=(Product) objetoEnviado.getSerializable("product");
+                    RecyclerView rv = findViewById(R.id.rv);
+                    LinearLayoutManager llm = new LinearLayoutManager(this);
+                    rv.setLayoutManager(llm);
+                    products.add(producto);
+                    objetoEnviado=null;
+                    Toast.makeText(getApplicationContext(), String.valueOf(products.size()), Toast.LENGTH_SHORT).show();
+                    RVAdapter adapter = new RVAdapter(products);
+                    rv.setAdapter(adapter);
+                }
+                else{
                     this.carroVacio();
                 }
+            }
         }
+        catch (NumberFormatException e){
+            Log.d("hola",e.getMessage());
+        }
+
     }
-
-
-
+    
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
+        this.convertirListAString();
+        outState.putStringArrayList("listaObjetos",listaString);
         // Save the state of the TextView
     }
 
@@ -103,6 +114,36 @@ public class MainActivity extends AppCompatActivity {
         this.onSaveInstanceState(bundle);
         Intent intent = new Intent(this, ListProduct.class);
         startActivity(intent);
+    }
+
+    public void convertirListAString(){
+        int tamano = products.size();
+        int tamanoArreglo=tamano*tamano;
+        int i = 0;
+        listaString.clear();
+        while(i<tamanoArreglo){
+            listaString.add(String.valueOf(products.get(i).getId()));
+            listaString.add(products.get(i).getDescription());
+            listaString.add(products.get(i).getPrice());
+            i++;
+        }
+    }
+
+    public void convertirListAProducts(){
+        int tamano = listaString.size();
+        int numberProduct=tamano/tamano;
+        int i=0;
+        while(i<tamano){
+            products.add(new Product(Integer.parseInt(listaString.get(i)),listaString.get(i+1),listaString.get(i+2)));
+            i=i+numberProduct;
+        }
+
+    }
+
+    public void imprimirLista(ArrayList<String> lista){
+        for(int i=0;i<lista.size();i++){
+            Log.d("Elemento lista "+i+":", ""+ lista.get(i) +"");
+        }
     }
 
 }
