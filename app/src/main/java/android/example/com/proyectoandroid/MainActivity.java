@@ -92,8 +92,6 @@ public class MainActivity extends AppCompatActivity {
                 for(int i=0;i<products.size();i++){
                     montoC=montoC+Integer.parseInt(products.get(i).getPrice());
                 }
-                TextView monto = findViewById(R.id.montoCompra);
-                monto.setText("Total compra> "+String.valueOf(montoC)+" $");
             }
             else{
                 Toast.makeText(getApplicationContext(), "You can only order a maximum of 10 articles", Toast.LENGTH_LONG).show();
