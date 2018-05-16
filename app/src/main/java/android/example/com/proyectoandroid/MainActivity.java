@@ -3,13 +3,10 @@ package android.example.com.proyectoandroid;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
-import android.net.Uri;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.FrameLayout;
@@ -19,66 +16,27 @@ import android.widget.RelativeLayout;
 import android.widget.TableLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     RecyclerView rv;
+    RelativeLayout container;
     public List<Product> products = new ArrayList<>();
-    public ArrayList<String> listaString = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        try{
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_main);
-
-
-            //Recibir el objeto de la segunda activity
-            Bundle objetoEnviado = getIntent().getExtras();
-            Product producto;
-
-            if(savedInstanceState!=null){
-                if(products!=null){
-                    listaString = savedInstanceState.getStringArrayList("listaObjetos");
-                    this.convertirListAProducts();
-                    RVAdapter adapter = new RVAdapter(products);
-                    rv.setAdapter(adapter);
-                }
-            }
-
-            else{
-                //RelativeLayout vRelative = findViewById(R.id.relativeLayout0);
-                if(objetoEnviado!=null){
-                    producto=(Product) objetoEnviado.getSerializable("product");
-                    RecyclerView rv = findViewById(R.id.rv);
-                    LinearLayoutManager llm = new LinearLayoutManager(this);
-                    rv.setLayoutManager(llm);
-                    products.add(producto);
-                    objetoEnviado=null;
-                    Toast.makeText(getApplicationContext(), String.valueOf(products.size()), Toast.LENGTH_SHORT).show();
-                    RVAdapter adapter = new RVAdapter(products);
-                    rv.setAdapter(adapter);
-                }
-                else{
-                    this.carroVacio();
-                }
-            }
-        }
-        catch (NumberFormatException e){
-            Log.d("hola",e.getMessage());
-        }
-
+            this.carroVacio();
     }
-
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        this.convertirListAString();
-        outState.putStringArrayList("listaObjetos",listaString);
-        // Save the state of the TextView
+        //outState.putStringArrayList("listaObjetos",listaString);
     }
 
 
@@ -86,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
      *
      */
     public void carroVacio(){
-        RelativeLayout container = new RelativeLayout(getApplicationContext());
+        container = new RelativeLayout(getApplicationContext());
         container.setLayoutParams(new RelativeLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
         container.setGravity(Gravity.CENTER);
         ImageView imagen = new ImageView(getApplicationContext());
@@ -112,8 +70,6 @@ public class MainActivity extends AppCompatActivity {
      * finalmente llama a la activity ListProduct con el intent generado
      */
     public void bAgregarArticulo(View view) {
-        //Bundle bundle = new Bundle();
-        //this.onSaveInstanceState(bundle);
         Intent intent = new Intent(this, ListProduct.class);
         startActivityForResult(intent,1);
     }
@@ -122,46 +78,27 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) {
-            Bundle objetoEnviado = getIntent().getExtras();
+            container.setVisibility(View.INVISIBLE);
+            Bundle objetoEnviado = data.getExtras();
             Product producto = (Product) objetoEnviado.getSerializable("product");
             RecyclerView rv = findViewById(R.id.rv);
             LinearLayoutManager llm = new LinearLayoutManager(this);
             rv.setLayoutManager(llm);
-            products.add(producto);
-            objetoEnviado=null;
-            Toast.makeText(getApplicationContext(), String.valueOf(products.size()), Toast.LENGTH_SHORT).show();
-            RVAdapter adapter = new RVAdapter(products);
-            rv.setAdapter(adapter);
-        }
-    }
+            if(products.size()<10){
+                products.add(producto);
+                RVAdapter adapter = new RVAdapter(products);
+                rv.setAdapter(adapter);
+                int montoC=0;
+                for(int i=0;i<products.size();i++){
+                    montoC=montoC+Integer.parseInt(products.get(i).getPrice());
+                }
+                TextView monto = findViewById(R.id.montoCompra);
+                monto.setText("Total compra> "+String.valueOf(montoC)+" $");
+            }
+            else{
+                Toast.makeText(getApplicationContext(), "You can only order a maximum of 10 articles", Toast.LENGTH_LONG).show();
+            }
 
-    public void convertirListAString(){
-        int tamano = products.size();
-        int tamanoArreglo=tamano*tamano;
-        int i = 0;
-        listaString.clear();
-        while(i<tamanoArreglo){
-            listaString.add(String.valueOf(products.get(i).getId()));
-            listaString.add(products.get(i).getDescription());
-            listaString.add(products.get(i).getPrice());
-            i++;
-        }
-    }
-
-    public void convertirListAProducts(){
-        int tamano = listaString.size();
-        int numberProduct=tamano/tamano;
-        int i=0;
-        while(i<tamano){
-            products.add(new Product(Integer.parseInt(listaString.get(i)),listaString.get(i+1),listaString.get(i+2)));
-            i=i+numberProduct;
-        }
-
-    }
-
-    public void imprimirLista(ArrayList<String> lista){
-        for(int i=0;i<lista.size();i++){
-            Log.d("Elemento lista "+i+":", ""+ lista.get(i) +"");
         }
     }
 

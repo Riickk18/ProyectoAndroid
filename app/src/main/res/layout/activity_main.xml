@@ -7,175 +7,14 @@
     tools:context=".MainActivity"
     android:background="#EEEE">
 
-  <!--  <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout0"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textintro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/padding_regular"
-                android:text="@string/header_main"
-                android:textSize="@dimen/text_heading" />
-
-            <RelativeLayout
-                android:id="@id/relativeLayout1.1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margen_superior_relativeLayout"
-                android:layout_below="@id/textintro">
-
-                <ImageView
-                    android:id="@+id/image1"
-                    android:layout_width="@dimen/width_image"
-                    android:layout_height="@dimen/heigth_image"
-                    android:layout_below="@id/choose_phone"
-                    android:padding="@dimen/padding_regular" />
-
-                <TextView
-                    android:id="@+id/descripcion1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/choose_phone"
-                    android:layout_toRightOf="@id/image1"
-                    android:padding="@dimen/padding_wide" />
-
-                <TextView
-                    android:id="@+id/precio1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/descripcion1"
-                    android:layout_toRightOf="@id/image1"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:textSize="@dimen/size_price"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout1.2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relativeLayout1.1"
-                android:layout_marginTop="@dimen/margen_superior_relativeLayout">
-
-                <ImageView
-                    android:id="@+id/image2"
-                    android:layout_width="@dimen/width_image"
-                    android:layout_height="@dimen/heigth_image"
-                    android:layout_below="@id/choose_phone"
-                    android:padding="@dimen/padding_regular" />
-
-                <TextView
-                    android:id="@+id/descripcion2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/choose_phone"
-                    android:layout_toRightOf="@id/image2"
-                    android:padding="@dimen/padding_wide" />
-
-                <TextView
-                    android:id="@+id/precio2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/descripcion2"
-                    android:layout_toRightOf="@id/image2"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:textSize="@dimen/size_price"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout1.3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relativeLayout1.2"
-                android:layout_marginTop="@dimen/margen_superior_relativeLayout">
-
-                <ImageView
-                    android:id="@+id/image3"
-                    android:layout_width="@dimen/width_image"
-                    android:layout_height="@dimen/heigth_image"
-                    android:layout_below="@id/choose_phone"
-                    android:padding="@dimen/padding_regular" />
-
-                <TextView
-                    android:id="@+id/descripcion3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/choose_phone"
-                    android:layout_toRightOf="@id/image3"
-                    android:padding="@dimen/padding_wide" />
-
-                <TextView
-                    android:id="@+id/precio3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/descripcion3"
-                    android:layout_toRightOf="@id/image3"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:textSize="@dimen/size_price"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:id="@+id/relativeLayout1.4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/relativeLayout1.3"
-                android:layout_marginTop="@dimen/margen_superior_relativeLayout">
-
-                <ImageView
-                    android:id="@+id/image4"
-                    android:layout_width="@dimen/width_image"
-                    android:layout_height="@dimen/heigth_image"
-                    android:layout_below="@id/choose_phone"
-                    android:padding="@dimen/padding_regular" />
-
-                <TextView
-                    android:id="@+id/descripcion4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/choose_phone"
-                    android:layout_toRightOf="@id/image4"
-                    android:padding="@dimen/padding_wide" />
-
-                <TextView
-                    android:id="@+id/precio4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/descripcion4"
-                    android:layout_toRightOf="@id/image4"
-                    android:paddingLeft="@dimen/padding_left"
-                    android:textSize="@dimen/size_price"
-                    android:textStyle="bold" />
-
-            </RelativeLayout>
-
-        </RelativeLayout>
-
-
-    </ScrollView>
-
--->
-
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/launchListProduct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginBottom="@dimen/maring_FAB"
+        android:layout_marginEnd="@dimen/maring_FAB"
+        android:layout_marginRight="@dimen/maring_FAB"
         android:clickable="true"
         android:focusable="true"
         android:onClick="bAgregarArticulo"
@@ -185,13 +24,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_input_add"
         app:fabSize="normal"/>
-
-  <android.support.v7.widget.RecyclerView
-      android:id="@+id/rv"
-      android:layout_width="match_parent"
-      android:layout_height="wrap_content"
-      android:scrollbars="vertical" />
-
-
+    
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"/>
 
 </android.support.design.widget.CoordinatorLayout>

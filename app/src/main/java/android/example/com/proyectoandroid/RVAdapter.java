@@ -26,7 +26,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
     }
 
     public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
-        personViewHolder.price.setText(productos.get(i).getPrice());
+        personViewHolder.price.setText(productos.get(i).getPrice()+" $");
         personViewHolder.descrip.setText(productos.get(i).getDescription());
         personViewHolder.image.setImageResource(productos.get(i).getId());
     }

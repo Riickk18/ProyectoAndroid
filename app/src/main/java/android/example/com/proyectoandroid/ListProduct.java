@@ -41,7 +41,7 @@ public class ListProduct extends AppCompatActivity {
      * Shows a message that image was clicked.
      * Create the object product
      */
-    public void showBluVivoXl3PlusOrder(ImageView view) {
+    public void showBluVivoXl3PlusOrder(View view) {
         Product product = new Product(R.drawable.blu_vivo_xl3_plus, view.getContentDescription().toString(),"139");
         showPhoneOrder(getString(R.string.order_blu_vivo_xl3_plus), product);
     }
