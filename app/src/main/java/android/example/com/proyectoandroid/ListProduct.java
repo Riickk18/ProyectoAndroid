@@ -1,5 +1,6 @@
 package android.example.com.proyectoandroid;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -28,11 +29,12 @@ public class ListProduct extends AppCompatActivity {
     public void showPhoneOrder(String message, Product product) {
 
         displayToast(message);
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent();
         Bundle bundle = new Bundle();                   //Se crea el  bundle que guardara el objeto product
         bundle.putSerializable("product", product);     //Se asigna una clave y el objeto a enviar
         intent.putExtras(bundle);
-        startActivity(intent);
+        setResult(Activity.RESULT_OK, intent);
+        finish();
     }
 
     /**

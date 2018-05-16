@@ -1,7 +1,9 @@
 package android.example.com.proyectoandroid;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -69,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-    
+
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
@@ -110,10 +112,27 @@ public class MainActivity extends AppCompatActivity {
      * finalmente llama a la activity ListProduct con el intent generado
      */
     public void bAgregarArticulo(View view) {
-        Bundle bundle = new Bundle();
-        this.onSaveInstanceState(bundle);
+        //Bundle bundle = new Bundle();
+        //this.onSaveInstanceState(bundle);
         Intent intent = new Intent(this, ListProduct.class);
-        startActivity(intent);
+        startActivityForResult(intent,1);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == Activity.RESULT_OK) {
+            Bundle objetoEnviado = getIntent().getExtras();
+            Product producto = (Product) objetoEnviado.getSerializable("product");
+            RecyclerView rv = findViewById(R.id.rv);
+            LinearLayoutManager llm = new LinearLayoutManager(this);
+            rv.setLayoutManager(llm);
+            products.add(producto);
+            objetoEnviado=null;
+            Toast.makeText(getApplicationContext(), String.valueOf(products.size()), Toast.LENGTH_SHORT).show();
+            RVAdapter adapter = new RVAdapter(products);
+            rv.setAdapter(adapter);
+        }
     }
 
     public void convertirListAString(){
