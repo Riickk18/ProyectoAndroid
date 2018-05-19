@@ -18,7 +18,10 @@ public class BuyProduct extends AppCompatActivity {
         ArrayList<String> lista = (ArrayList<String>) getIntent().getSerializableExtra("dato");
         mostrarFactura(lista);
     }
-    
+
+    /** Metodo que muestra los contennidos del ArrayList del intent
+     * @param lista
+     */
     public void mostrarFactura( ArrayList<String> lista){
         TextView total=findViewById(R.id.total);
         TextView precio=findViewById(R.id.precio);
@@ -27,6 +30,9 @@ public class BuyProduct extends AppCompatActivity {
 
     }
 
+    /**Metodo que inicia una nueva MainActivity
+     * @param view
+     */
     public void finishShop(View view) {
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
