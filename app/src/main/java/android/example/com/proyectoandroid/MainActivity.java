@@ -112,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "You can only order a maximum of 10 articles", Toast.LENGTH_LONG).show();
             }
         }
-        else {
+        else if(resultCode == Activity.RESULT_FIRST_USER) {
             products.clear();
             carroVacio();
             TextView precioCompra = findViewById(R.id.costoCompra);
@@ -125,6 +125,9 @@ public class MainActivity extends AppCompatActivity {
             RVAdapter adapter = new RVAdapter(products);
             rv.setAdapter(adapter);
             products.clear();
+        }
+        else{
+
         }
     }
 
