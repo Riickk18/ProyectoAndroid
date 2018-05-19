@@ -111,6 +111,20 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "You can only order a maximum of 10 articles", Toast.LENGTH_LONG).show();
             }
         }
+        else {
+            products.clear();
+            carroVacio();
+            TextView precioCompra = findViewById(R.id.costoCompra);
+            precioCompra.setText("");
+            Product producto = new Product(0,"","");
+            products.add(producto);
+            RecyclerView rv = findViewById(R.id.rv);
+            LinearLayoutManager llm = new LinearLayoutManager(this);
+            rv.setLayoutManager(llm);
+            RVAdapter adapter = new RVAdapter(products);
+            rv.setAdapter(adapter);
+            products.clear();
+        }
     }
 
     public void buyPhone(View view) {
