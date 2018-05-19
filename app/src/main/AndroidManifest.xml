@@ -9,8 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity"
-                  android:configChanges="keyboardHidden|orientation|screenSize"
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
             android:theme="@style/AppTheme.BarraPachecoTam">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,10 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ListProduct" android:parentActivityName=".MainActivity">
+        <activity
+            android:name=".ListProduct"
+            android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="android.example.com.proyectoandroid.MainActivity" />
+        </activity>
+        <activity android:name=".BuyProduct"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:parentActivityName=".MainActivity">
         </activity>
     </application>
 

@@ -68,6 +68,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_input_add"
         app:fabSize="normal"/>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/comprar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|left"
+        android:layout_marginBottom="@dimen/maring_FAB"
+        android:layout_marginEnd="@dimen/maring_FAB"
+        android:layout_marginStart="@dimen/maring_FAB"
+        android:layout_marginRight="@dimen/maring_FAB"
+        android:layout_marginLeft="@dimen/maring_FAB"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="buyPhone"
+        android:tint="@android:color/background_light"
+        app:backgroundTint="?attr/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_input_add"
+        app:fabSize="normal"/>
     
         <android.support.v7.widget.RecyclerView
             android:id="@+id/rv"

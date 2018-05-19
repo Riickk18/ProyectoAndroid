@@ -3,12 +3,14 @@ package android.example.com.proyectoandroid;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -25,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
     RecyclerView rv;
     RelativeLayout container;
     public List<Product> products = new ArrayList<>();
+    public ArrayList<String> buy = new ArrayList<>();
+    FloatingActionButton bBuy;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
      *
      */
     public void carroVacio(){
+        bBuy = (FloatingActionButton) findViewById(R.id.comprar);
+        bBuy.hide();
         container = new RelativeLayout(getApplicationContext());
         container.setLayoutParams(new RelativeLayout.LayoutParams(TableLayout.LayoutParams.MATCH_PARENT, TableLayout.LayoutParams.WRAP_CONTENT));
         container.setGravity(Gravity.CENTER);
@@ -79,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) {
             container.setVisibility(View.INVISIBLE);
+            bBuy = (FloatingActionButton) findViewById(R.id.comprar);
+            bBuy.show();
             Bundle objetoEnviado = data.getExtras();
             Product producto = (Product) objetoEnviado.getSerializable("product");
             RecyclerView rv = findViewById(R.id.rv);
@@ -94,12 +102,19 @@ public class MainActivity extends AppCompatActivity {
                 }
                 TextView precioCompra = findViewById(R.id.costoCompra);
                 precioCompra.setText("Total compra: "+String.valueOf(montoC)+"$");
+                buy.clear();
+                buy.add(0, String.valueOf(montoC));
+                buy.add(1, String.valueOf(products.size()));
             }
             else{
                 Toast.makeText(getApplicationContext(), "You can only order a maximum of 10 articles", Toast.LENGTH_LONG).show();
             }
-
         }
     }
 
+    public void buyPhone(View view) {
+        Intent intent = new Intent(this, BuyProduct.class);
+        intent.putExtra("dato", buy);
+        startActivityForResult(intent,1);
+    }
 }
