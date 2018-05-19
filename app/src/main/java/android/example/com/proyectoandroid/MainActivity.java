@@ -53,9 +53,10 @@ public class MainActivity extends AppCompatActivity {
         texto.setTextColor(Color.GRAY);
         texto.setTextSize(15);
         imagen.setImageResource(R.drawable.carro);
-        int ancho = 150;
-        int alto = 150;
-        LinearLayout.LayoutParams parametro = new LinearLayout.LayoutParams(ancho, alto);
+        imagen.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        int ancho = 250;
+        int alto = 250;
+        LinearLayout.LayoutParams parametro = new LinearLayout.LayoutParams(ancho, alto, Gravity.CENTER);
         imagen.setLayoutParams(parametro);
         container.addView(imagen);
         container.addView(texto);
