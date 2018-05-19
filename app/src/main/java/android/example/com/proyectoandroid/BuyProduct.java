@@ -18,12 +18,18 @@ public class BuyProduct extends AppCompatActivity {
         ArrayList<String> lista = (ArrayList<String>) getIntent().getSerializableExtra("dato");
         mostrarFactura(lista);
     }
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
+    }
     
     public void mostrarFactura( ArrayList<String> lista){
         TextView total=findViewById(R.id.total);
         TextView precio=findViewById(R.id.precio);
         total.setText(lista.get(1));
-        precio.setText(lista.get(0));
+        precio.setText(lista.get(0)+"$");
 
     }
 

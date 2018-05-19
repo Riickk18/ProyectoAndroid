@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                     montoC=montoC+Integer.parseInt(products.get(i).getPrice());
                 }
                 TextView precioCompra = findViewById(R.id.costoCompra);
-                precioCompra.setText("Total compra: "+String.valueOf(montoC)+"$");
+                precioCompra.setText("Total purchase: "+String.valueOf(montoC)+"$");
                 buy.clear();
                 buy.add(0, String.valueOf(montoC));
                 buy.add(1, String.valueOf(products.size()));
