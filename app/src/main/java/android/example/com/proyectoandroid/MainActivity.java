@@ -116,7 +116,7 @@ public class MainActivity extends AppCompatActivity {
             carroVacio();
             TextView precioCompra = findViewById(R.id.costoCompra);
             precioCompra.setText("");
-            Product producto = new Product(0,"","");
+            Product producto = new Product(0,"","");        //borrar lista de la compra anterior
             products.add(producto);
             RecyclerView rv = findViewById(R.id.rv);
             LinearLayoutManager llm = new LinearLayoutManager(this);

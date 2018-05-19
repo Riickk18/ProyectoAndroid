@@ -31,7 +31,7 @@ public class BuyProduct extends AppCompatActivity {
 
     }
 
-    /**Metodo que inicia una nueva MainActivity
+    /**Metodo que retorna a MainActivity
      * @param view
      */
     public void finishShop(View view) {
