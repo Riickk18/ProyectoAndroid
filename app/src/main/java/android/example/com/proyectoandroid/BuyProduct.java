@@ -1,5 +1,6 @@
 package android.example.com.proyectoandroid;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,11 +38,12 @@ public class BuyProduct extends AppCompatActivity {
 
     }
 
-    /**Metodo que inicia una nueva MainActivity
+    /**Metodo que retorna a MainActivity
      * @param view
      */
     public void finishShop(View view) {
         Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
+        setResult(Activity.RESULT_FIRST_USER, intent);
+        finish();
     }
 }
