@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
      * Método que recibe un View, al recibir este view genera un intent
      * el cuál recibe el contexto de la view y la clase ListProduct como parámetros
      * finalmente llama a la activity ListProduct con el intent generado
+     * @param view
      */
     public void bAgregarArticulo(View view) {
         Intent intent = new Intent(this, ListProduct.class);
@@ -102,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
                     montoC=montoC+Integer.parseInt(products.get(i).getPrice());
                 }
                 TextView precioCompra = findViewById(R.id.costoCompra);
-                precioCompra.setText("Total compra: "+String.valueOf(montoC)+"$");
+                precioCompra.setText("Total purchase: "+String.valueOf(montoC)+"$");
                 buy.clear();
                 buy.add(0, String.valueOf(montoC));
                 buy.add(1, String.valueOf(products.size()));
@@ -113,6 +114,10 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Meetodo que llama a la actividad para la compra de los productos
+     * @param view
+     */
     public void buyPhone(View view) {
         Intent intent = new Intent(this, BuyProduct.class);
         intent.putExtra("dato", buy);

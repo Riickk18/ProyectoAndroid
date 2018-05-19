@@ -19,14 +19,21 @@ public class BuyProduct extends AppCompatActivity {
         mostrarFactura(lista);
     }
 
+
+    @Override
+    public boolean onSupportNavigateUp() {
+        onBackPressed();
+        return false;
+    }
+
     /** Metodo que muestra los contennidos del ArrayList del intent
-     * @param lista
+     *@param lista
      */
     public void mostrarFactura( ArrayList<String> lista){
         TextView total=findViewById(R.id.total);
         TextView precio=findViewById(R.id.precio);
         total.setText(lista.get(1));
-        precio.setText(lista.get(0));
+        precio.setText(lista.get(0)+"$");
 
     }
 
