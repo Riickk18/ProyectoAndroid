@@ -79,18 +79,18 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (resultCode == Activity.RESULT_OK) {
-            container.setVisibility(View.INVISIBLE);
-            Bundle objetoEnviado = data.getExtras();
-            Product producto = (Product) objetoEnviado.getSerializable("product");
+            container.setVisibility(View.INVISIBLE);//hacer invisible el layout de carro vacío
+            Bundle objetoEnviado = data.getExtras();//recibo los datos contenidos en data
+            Product producto = (Product) objetoEnviado.getSerializable("product");//transformo el objetc en el tipo de objeto necesario
             RecyclerView rv = findViewById(R.id.rv);
             LinearLayoutManager llm = new LinearLayoutManager(this);
             rv.setLayoutManager(llm);
-            if(products.size()<10){
-                products.add(producto);
+            if(products.size()<10){//valido que el carrito solo tenga 10 artículos
+                products.add(producto);//anado el producto recibido a la lista
                 RVAdapter adapter = new RVAdapter(products);
-                rv.setAdapter(adapter);
+                rv.setAdapter(adapter);//crea la interfaz del carro con la lista productos
                 int montoC=0;
-                for(int i=0;i<products.size();i++){
+                for(int i=0;i<products.size();i++){//calculo el monto total de la compra
                     montoC=montoC+Integer.parseInt(products.get(i).getPrice());
                 }
             }

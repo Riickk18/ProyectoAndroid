@@ -14,7 +14,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
 
     List<Product> productos;
 
-    RVAdapter(List<Product> persons){
+    RVAdapter(List<Product> persons){//constructor que recibe la lista de productos
         this.productos = persons;
     }
 
@@ -25,7 +25,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
         return pvh;
     }
 
-    public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {
+    public void onBindViewHolder(PersonViewHolder personViewHolder, int i) {//asigna los valores al cardview producto a producto
         personViewHolder.price.setText(productos.get(i).getPrice()+" $");
         personViewHolder.descrip.setText(productos.get(i).getDescription());
         personViewHolder.image.setImageResource(productos.get(i).getId());
@@ -36,7 +36,7 @@ public class RVAdapter extends RecyclerView.Adapter<RVAdapter.PersonViewHolder>{
         super.onAttachedToRecyclerView(recyclerView);
     }
 
-    public int getItemCount() {
+    public int getItemCount() {//cuenta cuantos productos tiene la lista
         return productos.size();
     }
 
