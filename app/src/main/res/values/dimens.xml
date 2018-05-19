@@ -16,4 +16,8 @@
     <dimen name="textSize_Price_CardView">25sp</dimen>
     <dimen name="maring_FAB">16dp</dimen>
     <dimen name="size_montoVenta">20sp</dimen>
+    <dimen name="tamano_logo">30dp</dimen>
+    <dimen name="costoCompra_size">15dp</dimen>
+    <dimen name="margen_del_toolbar">60dp</dimen>
+    <dimen name="padding_buy">20dp</dimen>
 </resources>
